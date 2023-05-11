@@ -10,7 +10,7 @@ class CalculatorLayout(GridLayout):
         self.add_widget(Button(text='7'))
         self.add_widget(Button(text='8'))
         self.add_widget(Button(text='9'))
-        self.add_widget(Button(text='+''))
+        self.add_widget(Button(text='+'))
 
         self.add_widget(Button(text='4'))
         self.add_widget(Button(text='5'))
@@ -26,3 +26,10 @@ class CalculatorLayout(GridLayout):
         self.add_widget(Button(text='0'))
         self.add_widget(Button(text='C'))
         self.add_widget(Button(text='/'))
+
+class CalculatorApp(App):
+    def build(self):
+        return CalculatorLayout()
+
+if __name__ == '__main__':
+    CalculatorApp().run()
